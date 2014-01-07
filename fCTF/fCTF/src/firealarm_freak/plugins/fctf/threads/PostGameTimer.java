@@ -19,8 +19,14 @@ public class PostGameTimer implements Runnable{
 				e.printStackTrace();
 			}
 		}
-		for (Player p : Bukkit.getOnlinePlayers()) {
-			p.kickPlayer("Server Restarting, come back in a moment...");
+		if(Game.match == Game.maxMatches) {
+			for (Player p : Bukkit.getOnlinePlayers()) {
+				p.kickPlayer("Server Restarting, come back in a moment...");
+				Main.
+			}
+		} else {
+			MapManager.unloadMap();
+			
 		}
 	}
 }

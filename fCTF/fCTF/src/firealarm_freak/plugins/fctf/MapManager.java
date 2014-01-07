@@ -17,4 +17,11 @@ public class MapManager {
 		Game.spawnB = new Location(w, 0, 0, 0);
 		MapConfigManager.loadMapConfig(world);
 	}
+	public static void unloadMap() {
+		Game.flagA = null;
+		Game.flagB = null;
+		Game.spawn = null;
+		Game.spawnA = null;
+		Game.spawnB = null;
+	}
 }
