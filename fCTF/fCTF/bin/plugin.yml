@@ -1,0 +1,28 @@
+name: fCTF
+main: firealarm_freak.plugins.fctf.Main
+version: 0.2
+commands:
+  switch:
+    usage: /<command>
+    description: Switches to the other team.
+  start:
+    usage: /<command>
+    description: start's the game.
+  flags:
+    usage: /<command>
+    description: Tells who has the flag.
+  heavy:
+    usage: /<command>
+    description: Changes to the heavy class.
+  pyro:
+    usage: /<command>
+    description: Changes to the pyro class.
+  stats:
+    usage: /<command>
+    description: Shows your game stats.
+  map:
+    usage: /<command>
+    description: Shows map info.
+  ctf:
+    usage: /<command>
+    description: Main admin command.
