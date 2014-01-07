@@ -12,6 +12,7 @@ public class Game {
 	
 	public static int caps2Win = 0;
 	public static int maxMatches = 2;
+	
 	public static int match = 0;
 	public static int state = 0;
 	public static boolean maintenenceInProgress = false;
@@ -29,6 +30,9 @@ public class Game {
 	
 	public static int teamASpawn = 0;
 	public static int teamBSpawn = 0;
+	
+	public static int teamAWins = 0;
+	public static int teamBWins = 0;
 	
 	public static void setCompassTargetPlayer(Player p) {
 		if (PlayerManager.checkPlayerTeam(p) == true && Game.flagBHolder == p.getName()) {

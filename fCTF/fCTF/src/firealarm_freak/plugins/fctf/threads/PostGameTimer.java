@@ -20,7 +20,7 @@ public class PostGameTimer implements Runnable{
 			}
 		}
 		for (Player p : Bukkit.getOnlinePlayers()) {
-			p.kickPlayer("Restarting");
+			p.kickPlayer("Server Restarting, come back in a moment...");
 		}
 	}
 }

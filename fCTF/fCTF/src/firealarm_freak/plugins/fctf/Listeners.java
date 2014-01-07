@@ -91,6 +91,7 @@ public class Listeners implements Listener{
 		Item i = event.getItem();
 		if (i.getItemStack().getType().equals(Material.WOOL)) {
 			if ((i.getItemStack().getData().getData() == DyeColor.BLUE.getData())) {
+				//Caps
 				if (PlayerManager.teamAPlayer.contains(event.getPlayer())) {
 					if (Game.flagBHolder == "Home") {
 						Bukkit.broadcastMessage(ChatColor.RED + event.getPlayer().getName() + ChatColor.GOLD + " stole " + ChatColor.BLUE + "Blue's" + ChatColor.GOLD + " flag!");
@@ -118,7 +119,8 @@ public class Listeners implements Listener{
 						ItemStack flag = wool.toItemStack(1);
 						inv.remove(flag);
 						Game.resetCompassTarget(event.getPlayer());
-						if (Game.teamBCaps == Game.caps2Win) {
+						if (Game.teamBCaps >= Game.caps2Win) {
+							Game.teamBWins++;
 							Game.state = 3;
 							new Thread(new PostGameTimer()).start();
 						}
@@ -162,6 +164,7 @@ public class Listeners implements Listener{
 						Game.resetCompassTarget(event.getPlayer());
 						if (Game.teamACaps == Game.caps2Win) {
 							Game.state = 3;
+							Game.teamAWins++;
 							new Thread(new PostGameTimer()).start();
 						}
 					} else if (Game.flagAHolder == "On Ground") {
